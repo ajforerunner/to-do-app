@@ -27,21 +27,23 @@ body {
     background-color: #f1f5f9;
     color: var(--dark);
     min-height: 100vh;
-    padding: 20px;
+    padding: 0;
+    margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .app-container {
-    max-width: 1200px;
+    max-width: 100%;
     width: 100%;
     background-color: white;
-    border-radius: 20px;
-    box-shadow: var(--shadow-lg);
+    border-radius: 0;
+    box-shadow: none;
     overflow: hidden;
     display: flex;
-    min-height: 90vh;
+    height: 100vh;
+    min-height: 100vh;
 }
 
 .sidebar {
@@ -107,7 +109,7 @@ body {
     flex: 1;
     padding: 30px;
     overflow-y: auto;
-    max-height: 90vh;
+    max-height: 100vh;
 }
 
 .welcome-header {
@@ -603,24 +605,49 @@ body {
 @media (max-width: 1000px) {
     .app-container {
         flex-direction: column;
-        height: auto;
-        max-height: none;
+        height: 100vh;
     }
 
     .sidebar {
         width: 100%;
         border-right: none;
         border-bottom: 1px solid var(--gray-light);
-        padding: 20px;
+        padding: 15px;
+        flex-shrink: 0;
+        max-height: 70px;
+        overflow: hidden;
+    }
+    
+    .logo {
+        margin-bottom: 0;
+    }
+    
+    .nav {
+        display: flex;
+        overflow-x: auto;
+    }
+    
+    .nav-item {
+        margin-right: 10px;
+        margin-bottom: 0;
+        white-space: nowrap;
     }
 
     .main-content {
-        height: auto;
+        padding: 15px;
     }
 }
 
 @media (max-width: 768px) {
     .buckets-grid, .stats-row {
         grid-template-columns: 1fr;
+    }
+    
+    .stat-card {
+        padding: 15px;
+    }
+    
+    .greeting {
+        font-size: 24px;
     }
 }
