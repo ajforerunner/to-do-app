@@ -1,0 +1,216 @@
+/* Electric Border Component Styles */
+
+:root {
+  --electric-border-color: #7df9ff; /* Electric cyan */
+  --electric-light-color: oklch(from var(--electric-border-color) l c h);
+  --eb-border-width: 2px;
+}
+
+.electric-border {
+  --electric-light-color: oklch(from var(--electric-border-color) l c h);
+  --eb-border-width: 2px;
+  position: relative;
+  border-radius: inherit;
+  overflow: visible;
+  isolation: isolate;
+}
+
+.eb-svg {
+  position: fixed;
+  left: -10000px;
+  top: -10000px;
+  width: 10px;
+  height: 10px;
+  opacity: 0.001;
+  pointer-events: none;
+}
+
+.eb-content {
+  position: relative;
+  border-radius: inherit;
+  z-index: 1;
+}
+
+.eb-layers {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.eb-stroke,
+.eb-glow-1,
+.eb-glow-2,
+.eb-overlay-1,
+.eb-overlay-2,
+.eb-background-glow {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  box-sizing: border-box;
+}
+
+.eb-stroke {
+  border: var(--eb-border-width) solid var(--electric-border-color);
+  animation: electricPulse 2s ease-in-out infinite;
+}
+
+.eb-glow-1 {
+  border: var(--eb-border-width) solid oklch(from var(--electric-border-color) l c h / 0.6);
+  opacity: 0.5;
+  filter: blur(calc(0.5px + (var(--eb-border-width) * 0.25)));
+  animation: electricPulse 2s ease-in-out infinite;
+  animation-delay: 0.1s;
+}
+
+.eb-glow-2 {
+  border: var(--eb-border-width) solid var(--electric-light-color);
+  opacity: 0.5;
+  filter: blur(calc(2px + (var(--eb-border-width) * 0.5)));
+  animation: electricPulse 2s ease-in-out infinite;
+  animation-delay: 0.2s;
+}
+
+.eb-background-glow {
+  z-index: -1;
+  transform: scale(1.08);
+  filter: blur(32px);
+  opacity: 0.3;
+  background: linear-gradient(-30deg, var(--electric-light-color), transparent, var(--electric-border-color));
+  animation: electricRotate 8s linear infinite;
+}
+
+/* Animation for pulsing electric effect */
+@keyframes electricPulse {
+  0%, 100% {
+    opacity: 0.5;
+    border-color: var(--electric-border-color);
+  }
+  50% {
+    opacity: 1;
+    border-color: rgba(125, 249, 255, 0.8);
+  }
+}
+
+/* Animation for rotating background glow */
+@keyframes electricRotate {
+  0% {
+    transform: scale(1.08) rotate(0deg);
+  }
+  100% {
+    transform: scale(1.08) rotate(360deg);
+  }
+}
+
+/* Card styling that works with electric border */
+.electric-card {
+  background-color: white;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 20px;
+}
+
+.electric-card-header {
+  font-size: 20px;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 12px;
+}
+
+.electric-card-subheader {
+  font-size: 12px;
+  color: #6b7280;
+  margin-bottom: 16px;
+}
+
+.electric-card-body {
+  font-size: 11px;
+  color: #374151;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.electric-card-stats {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.electric-card-stat {
+  flex: 1;
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 12px;
+  text-align: center;
+}
+
+.electric-card-stat-label {
+  font-size: 11px;
+  color: #6b7280;
+  margin-bottom: 4px;
+}
+
+.electric-card-stat-value {
+  font-size: 16px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.electric-card-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.electric-card-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 11px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.electric-card-button:hover {
+  background-color: #2563eb;
+}
+
+.electric-card-button:active {
+  background-color: #1d4ed8;
+}
+
+/* Variant colors */
+.electric-border[data-color="blue"] {
+  --electric-border-color: #3b82f6;
+}
+
+.electric-border[data-color="green"] {
+  --electric-border-color: #10b981;
+}
+
+.electric-border[data-color="purple"] {
+  --electric-border-color: #a855f7;
+}
+
+.electric-border[data-color="pink"] {
+  --electric-border-color: #ec4899;
+}
+
+.electric-border[data-color="orange"] {
+  --electric-border-color: #f97316;
+}
+
+.electric-border[data-color="cyan"] {
+  --electric-border-color: #7df9ff;
+}
