@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electric Border Card Demo</title>
+    <link rel="stylesheet" href="electric-border.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 40px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Open Sans', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        h1 {
+            width: 100%;
+            text-align: center;
+            color: white;
+            font-size: 48px;
+            margin-bottom: 20px;
+            text-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .demo-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>⚡ Electric Border Cards</h1>
+
+    <div class="demo-container">
+        <!-- Cyan Electric Card -->
+        <div class="electric-border" style="border-radius: 16px;" data-color="cyan">
+            <div class="eb-layers">
+                <div class="eb-stroke"></div>
+                <div class="eb-glow-1"></div>
+                <div class="eb-glow-2"></div>
+                <div class="eb-background-glow"></div>
+            </div>
+
+            <div class="eb-content">
+                <div class="electric-card">
+                    <img src="https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?w=400&h=200&fit=crop"
+                         class="electric-card-image"
+                         alt="Technology">
+
+                    <h2 class="electric-card-header">Website Redesign</h2>
+                    <p class="electric-card-subheader">$3,200 budget</p>
+                    <p class="electric-card-body">
+                        Overhaul of the website with new UI, better navigation, mobile-first design, and SEO optimization.
+                    </p>
+
+                    <div class="electric-card-stats">
+                        <div class="electric-card-stat">
+                            <div class="electric-card-stat-label">Days left</div>
+                            <div class="electric-card-stat-value">14</div>
+                        </div>
+                        <div class="electric-card-stat">
+                            <div class="electric-card-stat-label">Progress</div>
+                            <div class="electric-card-stat-value">82%</div>
+                        </div>
+                    </div>
+
+                    <button class="electric-card-button">Update</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Blue Electric Card -->
+        <div class="electric-border" style="border-radius: 16px;" data-color="blue">
+            <div class="eb-layers">
+                <div class="eb-stroke"></div>
+                <div class="eb-glow-1"></div>
+                <div class="eb-glow-2"></div>
+                <div class="eb-background-glow"></div>
+            </div>
+
+            <div class="eb-content">
+                <div class="electric-card">
+                    <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=400&h=200&fit=crop"
+                         class="electric-card-image"
+                         alt="Team collaboration">
+
+                    <h2 class="electric-card-header">Team Collaboration</h2>
+                    <p class="electric-card-subheader">$5,000 budget</p>
+                    <p class="electric-card-body">
+                        Implement real-time collaboration features with video chat, screen sharing, and document editing.
+                    </p>
+
+                    <div class="electric-card-stats">
+                        <div class="electric-card-stat">
+                            <div class="electric-card-stat-label">Days left</div>
+                            <div class="electric-card-stat-value">21</div>
+                        </div>
+                        <div class="electric-card-stat">
+                            <div class="electric-card-stat-label">Progress</div>
+                            <div class="electric-card-stat-value">45%</div>
+                        </div>
+                    </div>
+
+                    <button class="electric-card-button">Update</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Green Electric Card -->
+        <div class="electric-border" style="border-radius: 16px;" data-color="green">
+            <div class="eb-layers">
+                <div class="eb-stroke"></div>
+                <div class="eb-glow-1"></div>
+                <div class="eb-glow-2"></div>
+                <div class="eb-background-glow"></div>
+            </div>
+
+            <div class="eb-content">
+                <div class="electric-card">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=200&fit=crop"
+                         class="electric-card-image"
+                         alt="Analytics">
+
+                    <h2 class="electric-card-header">Analytics Dashboard</h2>
+                    <p class="electric-card-subheader">$2,800 budget</p>
+                    <p class="electric-card-body">
+                        Build comprehensive analytics dashboard with real-time data visualization and custom reports.
+                    </p>
+
+                    <div class="electric-card-stats">
+                        <div class="electric-card-stat">
+                            <div class="electric-card-stat-label">Days left</div>
+                            <div class="electric-card-stat-value">7</div>
+                        </div>
+                        <div class="electric-card-stat">
+                            <div class="electric-card-stat-label">Progress</div>
+                            <div class="electric-card-stat-value">95%</div>
+                        </div>
+                    </div>
+
+                    <button class="electric-card-button">Update</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Purple Electric Card -->
+        <div class="electric-border" style="border-radius: 16px;" data-color="purple">
+            <div class="eb-layers">
+                <div class="eb-stroke"></div>
+                <div class="eb-glow-1"></div>
+                <div class="eb-glow-2"></div>
+                <div class="eb-background-glow"></div>
+            </div>
+
+            <div class="eb-content">
+                <div class="electric-card">
+                    <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=400&h=200&fit=crop"
+                         class="electric-card-image"
+                         alt="AI Technology">
+
+                    <h2 class="electric-card-header">AI Integration</h2>
+                    <p class="electric-card-subheader">$8,500 budget</p>
+                    <p class="electric-card-body">
+                        Integrate machine learning models for predictive analytics and automated content generation.
+                    </p>
+
+                    <div class="electric-card-stats">
+                        <div class="electric-card-stat">
+                            <div class="electric-card-stat-label">Days left</div>
+                            <div class="electric-card-stat-value">30</div>
+                        </div>
+                        <div class="electric-card-stat">
+                            <div class="electric-card-stat-label">Progress</div>
+                            <div class="electric-card-stat-value">20%</div>
+                        </div>
+                    </div>
+
+                    <button class="electric-card-button">Update</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pink Electric Card -->
+        <div class="electric-border" style="border-radius: 16px;" data-color="pink">
+            <div class="eb-layers">
+                <div class="eb-stroke"></div>
+                <div class="eb-glow-1"></div>
+                <div class="eb-glow-2"></div>
+                <div class="eb-background-glow"></div>
+            </div>
+
+            <div class="eb-content">
+                <div class="electric-card">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=400&h=200&fit=crop"
+                         class="electric-card-image"
+                         alt="Mobile App">
+
+                    <h2 class="electric-card-header">Mobile App Launch</h2>
+                    <p class="electric-card-subheader">$12,000 budget</p>
+                    <p class="electric-card-body">
+                        Develop and launch native iOS and Android apps with offline support and push notifications.
+                    </p>
+
+                    <div class="electric-card-stats">
+                        <div class="electric-card-stat">
+                            <div class="electric-card-stat-label">Days left</div>
+                            <div class="electric-card-stat-value">45</div>
+                        </div>
+                        <div class="electric-card-stat">
+                            <div class="electric-card-stat-label">Progress</div>
+                            <div class="electric-card-stat-value">60%</div>
+                        </div>
+                    </div>
+
+                    <button class="electric-card-button">Update</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Orange Electric Card -->
+        <div class="electric-border" style="border-radius: 16px;" data-color="orange">
+            <div class="eb-layers">
+                <div class="eb-stroke"></div>
+                <div class="eb-glow-1"></div>
+                <div class="eb-glow-2"></div>
+                <div class="eb-background-glow"></div>
+            </div>
+
+            <div class="eb-content">
+                <div class="electric-card">
+                    <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=400&h=200&fit=crop"
+                         class="electric-card-image"
+                         alt="Marketing Campaign">
+
+                    <h2 class="electric-card-header">Marketing Campaign</h2>
+                    <p class="electric-card-subheader">$4,500 budget</p>
+                    <p class="electric-card-body">
+                        Launch multi-channel marketing campaign with social media, email, and content marketing strategies.
+                    </p>
+
+                    <div class="electric-card-stats">
+                        <div class="electric-card-stat">
+                            <div class="electric-card-stat-label">Days left</div>
+                            <div class="electric-card-stat-value">10</div>
+                        </div>
+                        <div class="electric-card-stat">
+                            <div class="electric-card-stat-label">Progress</div>
+                            <div class="electric-card-stat-value">75%</div>
+                        </div>
+                    </div>
+
+                    <button class="electric-card-button">Update</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Add hover effects
+        document.querySelectorAll('.electric-card-button').forEach(button => {
+            button.addEventListener('click', (e) => {
+                e.target.textContent = 'Updated!';
+                setTimeout(() => {
+                    e.target.textContent = 'Update';
+                }, 1500);
+            });
+        });
+    </script>
+</body>
+</html>
